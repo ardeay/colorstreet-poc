@@ -1,0 +1,19 @@
+{
+  "name": "learn-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p ${PORT:=3000}",
+    "build-container": "gcloud builds submit --tag gcr.io/zesty-dev/colorstreet-poc --project zesty-dev",
+    "deploy-cloud-run": "gcloud run deploy colorstreet-poc --image gcr.io/zesty-dev/colorstreet-poc --project zesty-dev --min-instances 1 --platform managed --set-env-vars [env=prod] --region us-central1",
+    "deploy": "npm run build-container && npm run deploy-cloud-run"
+  },
+  "dependencies": {
+    "next": "^10.0.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "styled-components": "^5.3.0"
+  }
+}

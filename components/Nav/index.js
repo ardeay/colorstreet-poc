@@ -1,0 +1,26 @@
+import Link from 'next/link';
+
+import styles from './Nav.module.css';
+
+const Nav = () => (
+  <div className={styles.Nav}>
+    <a
+      target='_blank'
+      href='https://github.com/zesty-io/demos/tree/main/nextjs'
+    >
+      Nextjs Demo Repo
+    </a>
+    <Link href='/'>
+      <a>Home (ServerSideProps) </a>
+    </Link>{' '}
+    <Link href='/search-example'>
+      <a>Search Example (StaticProps)</a>
+    </Link>
+    <img
+      src='https://brand.zesty.io/zesty-io-logo-horizontal-light.png'
+      alt='Zesty.io'
+    />
+  </div>
+);
+
+export default Nav;

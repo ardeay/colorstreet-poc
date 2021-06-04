@@ -1,0 +1,22 @@
+.Nav {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  background: #387ef5;
+}
+.Nav img {
+  max-width: 8rem;
+  height: auto;
+  margin-left: auto;
+  align-self: center;
+}
+
+.Nav a {
+  padding: 0 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.Nav a:hover {
+  text-decoration: underline;
+}
